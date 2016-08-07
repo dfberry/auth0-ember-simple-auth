@@ -57,11 +57,11 @@ module.exports = function(environment) {
   }
 
   ENV['contentSecurityPolicy'] = {
-    'font-src': "'self' data: https://*.auth0.com https://maxcdn.bootstrapcdn.com",
+    'font-src': "'self' data: https://*.auth0.com https://maxcdn.bootstrapcdn.com https://fonts.typekit.net http://cdn.auth0.com",
     'style-src': "'self' 'unsafe-inline' http://use.typekit.net https://maxcdn.bootstrapcdn.com",
     'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://*.auth0.com https://use.typekit.net",
-    'img-src': 'https://www.gravatar.com *.wp.com data: http://p.typekit.net',
-    'connect-src': "'self' http://localhost:* https://samples.auth0.com"
+    'img-src': "'self' 'https://www.gravatar.com *.wp.com data: http://p.typekit.net https://www.gravatar.com  http://cdn.auth0.com",
+    'connect-src': "'self' http://localhost:* https://samples.auth0.com https://performance.typekit.net"
   };  
   return ENV;
 };
